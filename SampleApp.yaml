@@ -3,3 +3,5 @@ testName: SampleAppTest
 testPlan: SampleApp.jmx
 description: 'SampleApp Test Run'
 engineInstances: 1
+failureCriteria: 
+    - percentage(error) > 0
