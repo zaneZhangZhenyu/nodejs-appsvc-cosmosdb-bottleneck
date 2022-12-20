@@ -11,47 +11,6 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="false">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="client_id" elementType="Argument">
-            <stringProp name="Argument.name">client_id</stringProp>
-            <stringProp name="Argument.value">e1cf79a7-13f5-4201-bca5-0b999bb419b0</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">${__BeanShell( System.getenv(&quot;client_id&quot;) )}</stringProp>
-          </elementProp>
-          <elementProp name="client_secret" elementType="Argument">
-            <stringProp name="Argument.name">client_secret</stringProp>
-            <stringProp name="Argument.value">ri08Q~-.Rb7vAFkQAhw4RKlJG.TqchvBrHN55dj-</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">${__BeanShell( System.getenv(&quot;client_secret&quot;) )}</stringProp>
-          </elementProp>
-          <elementProp name="tenant_id" elementType="Argument">
-            <stringProp name="Argument.name">tenant_id</stringProp>
-            <stringProp name="Argument.value">72f988bf-86f1-41af-91ab-2d7cd011db47</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">${__BeanShell( System.getenv(&quot;tenant_id&quot;) )}</stringProp>
-          </elementProp>
-          <elementProp name="users" elementType="Argument">
-            <stringProp name="Argument.name">users</stringProp>
-            <stringProp name="Argument.value">10</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">${__BeanShell( System.getenv(&quot;users&quot;) )}</stringProp>
-          </elementProp>
-          <elementProp name="token_endpoint" elementType="Argument">
-            <stringProp name="Argument.name">token_endpoint</stringProp>
-            <stringProp name="Argument.value">login.microsoftonline.com</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">${__BeanShell( System.getenv(&quot;token_endpoint&quot;) )}</stringProp>
-          </elementProp>
-          <elementProp name="scope" elementType="Argument">
-            <stringProp name="Argument.name">scope</stringProp>
-            <stringProp name="Argument.value">api://e9e0fb8a-20aa-448d-8530-15d80ce5863a/.default</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">${__BeanShell( System.getenv(&quot;scope&quot;) )}</stringProp>
-          </elementProp>
-        </collectionProp>
-      </Arguments>
-      <hashTree/>
       <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="true">
         <stringProp name="TestPlan.comments">Sign in, acquire token and create a key</stringProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -74,14 +33,14 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="client_id" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">e1cf79a7-13f5-4201-bca5-0b999bb419b0</stringProp>
+                  <stringProp name="Argument.value">${client_id}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">client_id</stringProp>
                 </elementProp>
                 <elementProp name="scope" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">api://e9e0fb8a-20aa-448d-8530-15d80ce5863a/.default</stringProp>
+                  <stringProp name="Argument.value">${scope}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">scope</stringProp>
@@ -106,7 +65,7 @@
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/72f988bf-86f1-41af-91ab-2d7cd011db47/oauth2/v2.0/token</stringProp>
+            <stringProp name="HTTPSampler.path">/${tenant_id}/oauth2/v2.0/token</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
