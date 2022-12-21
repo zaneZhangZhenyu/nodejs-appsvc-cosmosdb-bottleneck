@@ -1,3 +1,4 @@
+testname: SampleApp
 testPlan: SampleApp.jmx
 description: 'SampleApp Test Run'
 engineInstances: 1
