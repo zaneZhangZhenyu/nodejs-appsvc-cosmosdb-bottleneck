@@ -1,4 +1,4 @@
-testname: SampleApp
+testName: SampleApp
 testPlan: SampleApp.jmx
 description: 'SampleApp Test Run'
 engineInstances: 1
