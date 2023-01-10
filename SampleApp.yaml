@@ -1,16 +1,1 @@
-testName: SampleApp
-testPlan: SampleApp.jmx
-description: 'SampleApp Test Run'
-engineInstances: 1
-env:
-    - name: client_id
-      value: e1cf79a7-13f5-4201-bca5-0b999bb419b0
-    - name: scope
-      value: api://e9e0fb8a-20aa-448d-8530-15d80ce5863a/.default
-    - name: tenant_id
-      value: 72f988bf-86f1-41af-91ab-2d7cd011db47
-secrets:
-    - name: client_secret
-      value: https://keyvault4lt.vault.azure.net/secrets/clientsecret/884e693ed3634175a83507cc4cee072b
-failureCriteria: 
-    - percentage(error) > 10
+
