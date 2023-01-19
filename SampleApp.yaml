@@ -2,6 +2,19 @@ testName: SampleApp
 testPlan: SampleApp.jmx
 description: 'SampleApp Test Run'
 engineInstances: 1
+env:
+    - name: client_id
+      value: e1cf79a7-13f5-4201-bca5-0b999bb419b0
+    - name: scope
+      value: api://e9e0fb8a-20aa-448d-8530-15d80ce5863a/.default
+    - name: tenant_id
+      value: 72f988bf-86f1-41af-91ab-2d7cd011db47
+    - name: users
+      value: 100
+    - name: baseurl
+      value: dev.eastus2.hostaxis.trafficmanager.net
+secrets:
+    - name: client_secret
+      value: https://keyvault4lt.vault.azure.net/secrets/clientsecret/c90cc0c1f85d487aa12964608e5a36e0
 failureCriteria: 
     - percentage(error) > 10
-
