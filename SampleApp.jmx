@@ -13,39 +13,9 @@
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="client_id" elementType="Argument">
-            <stringProp name="Argument.name">client_id</stringProp>
-            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;client_id&quot;) )}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
           <elementProp name="client_secret" elementType="Argument">
             <stringProp name="Argument.name">client_secret</stringProp>
             <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;client_secret&quot;) )}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="tenant_id" elementType="Argument">
-            <stringProp name="Argument.name">tenant_id</stringProp>
-            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;tenant_id&quot;) )}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="users" elementType="Argument">
-            <stringProp name="Argument.name">users</stringProp>
-            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;users&quot;) )}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="baseurl" elementType="Argument">
-            <stringProp name="Argument.name">baseurl</stringProp>
-            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;baseurl&quot;) )}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="scope" elementType="Argument">
-            <stringProp name="Argument.name">scope</stringProp>
-            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;scope&quot;) )}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="hostname" elementType="Argument">
-            <stringProp name="Argument.name">hostname</stringProp>
-            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;hostname&quot;) )}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -73,14 +43,14 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="client_id" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${client_id}</stringProp>
+                  <stringProp name="Argument.value">e1cf79a7-13f5-4201-bca5-0b999bb419b0</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">client_id</stringProp>
                 </elementProp>
                 <elementProp name="scope" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${scope}</stringProp>
+                  <stringProp name="Argument.value">api://e9e0fb8a-20aa-448d-8530-15d80ce5863a/.default</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">scope</stringProp>
@@ -105,7 +75,7 @@
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/${tenant_id}/oauth2/v2.0/token</stringProp>
+            <stringProp name="HTTPSampler.path">/72f988bf-86f1-41af-91ab-2d7cd011db47/oauth2/v2.0/token</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -209,8 +179,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">5</stringProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">300</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -221,11 +191,11 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${baseurl}</stringProp>
+          <stringProp name="HTTPSampler.domain">dev.eastus2.hostaxis.trafficmanager.net</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">hosts/${hostname}/attributes</stringProp>
+          <stringProp name="HTTPSampler.path">hosts/microsoft.com/attributes</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
