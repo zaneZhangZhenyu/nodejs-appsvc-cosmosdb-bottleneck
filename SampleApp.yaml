@@ -6,4 +6,4 @@ secrets:
     - name: client_secret
       value: https://keyvault4lt.vault.azure.net/secrets/clientsecret/c90cc0c1f85d487aa12964608e5a36e0
 failureCriteria: 
-    - percentage(error) > 10
+    - p99(response_time_ms) > 200
