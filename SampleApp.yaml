@@ -1,9 +1,18 @@
-testName: SampleApp
+testName: hostaxis test plan
 testPlan: SampleApp.jmx
-description: 'SampleApp Test Run'
+description: 'load testing for hostaxis'
 engineInstances: 1
+env:
+    - name: users
+      value: 100
+    - name: period
+      value: 1
+    - name: address
+      value: microsoft.com
+    - name: hostname
+      value: microsoft.com
 secrets:
     - name: client_secret
       value: https://keyvault4lt.vault.azure.net/secrets/clientsecret/c90cc0c1f85d487aa12964608e5a36e0
 failureCriteria:
-    - p99(response_time_ms) > 300
+    - p99(response_time_ms) > 1000
