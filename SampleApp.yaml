@@ -1,4 +1,4 @@
-testName: hostaxis test plan
+testName: hostaxistestplan
 testPlan: SampleApp.jmx
 description: 'load testing for hostaxis'
 engineInstances: 1
